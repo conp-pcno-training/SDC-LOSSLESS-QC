@@ -1,9 +1,10 @@
 ---
-title: "Introduction to the Quality Check Procedure"
+title: "Making Decisions About the Data"
 teaching: 0
 exercises: 0
 questions:
-- "Why is a manual quality check procedure done?"
+- "What decisions can be made about the data?"
+- "How do I make decisions about components and time periods?"
 objectives:
 - "Understand the benefits and necessity of a manual quality check procedure"
 keypoints:
