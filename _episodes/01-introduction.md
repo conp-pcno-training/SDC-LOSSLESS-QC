@@ -14,7 +14,7 @@ The quality check (QC) procedure is where you will review the decisions the pipe
 
 - Quality check is a manual procedure done on data after it has gone through the pipeline.
 - The files will be in a `*_ll.set` format from the pipeline.
-- Before the QC procedure can be done, files must first be QC-initialized. This involves running the `qc_init.htb` script on the files (in MATLAB 2015).
+- Before the QC procedure can be done, files must first be QC-initialized. This involves running the `qc_init.htb` script on the files (in MATLAB 2014b or later).
 - `qc_init.htb`: performs the IC Label procedure.
 - After the `qc_init.htb` script is run, you will have an `*_qc.set` file. 
 - The QC procedure is run on the `*_qc.set` files.

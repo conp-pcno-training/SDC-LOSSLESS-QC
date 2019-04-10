@@ -10,9 +10,9 @@ keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
 
-1. Open MATLAB (2015b or later).
+1. Open MATLAB (2014b or later).
 
-2. Navigate to the pipeline root directory (in this tutorial, that will be the face_13 folder)
+2. Navigate to the pipeline root directory (in this tutorial, that will be the face_13 folder).
 
 3. In the MATLAB Command Window, set the path for eeglab and its plugins, and open eeglab: 
 
@@ -28,7 +28,7 @@ keypoints:
 
     `>> vl_compilenn` (this only has to be done once per study)
 
-6. To run the `qc_init.htb` script, go to the EEGLab window and click **File->Batch->Run History Template Batch**.
+6. To run the `qc_init.htb` script, go to the main EEGLAB window and click **File->Batch->Run History Template Batch**.
 
 7. In the **Run History Template Batch** window, add a Context configuration file. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
 
