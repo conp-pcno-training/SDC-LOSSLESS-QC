@@ -24,13 +24,17 @@ keypoints:
 
 4. In the main EEGLAB window, navigate to **File->Vised Configuration**. 
 
+    ![Vised Config Dropdown Menu]({{ page.root }}/fig/visedconfig_dropdown.png)
+
 5. Add the vised configuration file by clicking **Load vised config** and then navigate to the config folder (`derivatives/lossless/code/config/`). Select the file named `vised_config_qc.cfg`, and click **OK**. The vised configuration file will load certain settings that are preferable for the QC procedure.
 
-    **Add an image of the eeglab window and of the Vised Config (FIXME).** 
+    ![Vised Config Menu]({{ page.root }}/fig/visedconfig.png)
 
 6. In the main eeglab window, navigate to **File->Batch->Run History Template Batch**.
 
-7. In the **Run History Template Batch** window, add a Context configuration file. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
+    ![Run History Template Batch Menu]({{ page.root }}/fig/pop_runhtb.png)
+
+7. In the **Run History Template Batch** window, add a Context configuration file by clicking **Load context cofig**. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
 
 8. Click **History File** and add the `qc.htb` script located in `derivatives/loseless/code/scripts/`.
 
@@ -45,8 +49,6 @@ keypoints:
 11. This will print a list of all your QC-initialized `*_qc.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
 
 12. Click **Ok** to start the QC batch process.
-
-    **Add an image of the Run History Template Batch menu (FIXME).**
 
 13. Once you click **Ok**, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
 
