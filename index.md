@@ -5,6 +5,8 @@ permalink: index.html  # Is the only page that doesn't follow the pattern /:path
 ---
 This tutorial will focus on the manual quality check (QC) procedure. We will discuss why it is important, how to set up MATLAB and EEGLAB to perform this procedure, and how to make the most appropriate decisions in terms of which components and/or time periods to mark for removal.
 
+   ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png)
+
 <!-- this is an html comment -->
 
 {% comment %} This is a comment in Liquid {% endcomment %}
