@@ -32,7 +32,7 @@ keypoints:
 
 6. In the main eeglab window, navigate to **File->Batch->Run History Template Batch**.
 
-    ![Run History Template Batch Menu]({{ page.root }}/fig/pop_runhtb.png)
+    ![Run History Template Batch Menu]({{ page.root }}/fig/runhtb_qc.png)
 
 7. In the **Run History Template Batch** window, add a Context configuration file by clicking **Load context config**. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
 

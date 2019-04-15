@@ -30,7 +30,7 @@ keypoints:
 
 6. To run the `qc_init.htb` script, go to the main EEGLAB window and click **File->Batch->Run History Template Batch**.
 
-    ![Run History Template Batch Menu]({{ page.root }}/fig/pop_runhtb.png)
+    ![Run History Template Batch Menu]({{ page.root }}/fig/runhtb_qc_init.png)
 
 7. In the **Run History Template Batch** window, add a Context configuration file by clicking **Load context config**. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
 
