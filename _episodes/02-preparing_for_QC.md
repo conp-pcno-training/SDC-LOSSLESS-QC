@@ -1,7 +1,7 @@
 ---
 title: "Preparing for the Quality Check Procedure"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
 - "How do I get my files from the lossless pipeline ready for quality checking?"
 objectives:

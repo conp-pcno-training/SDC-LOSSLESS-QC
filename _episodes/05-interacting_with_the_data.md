@@ -1,7 +1,7 @@
 ---
 title: "Interacting with the Data"
-teaching: 0
-exercises: 0
+teaching: 15
+exercises: 45
 questions:
 - "How do I make changes while doing the quality check?"
 objectives:

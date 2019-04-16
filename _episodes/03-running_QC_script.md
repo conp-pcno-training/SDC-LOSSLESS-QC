@@ -1,7 +1,7 @@
 ---
 title: "Running the Quality Check Script"
-teaching: 0
-exercises: 0
+teaching: 5
+exercises: 10
 questions:
 - "How do I run the quality check procedure?"
 objectives:
@@ -52,19 +52,24 @@ keypoints:
 
 13. Once you click **Ok**, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
 
-    - A window that displays the channel EEG data.
+    <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC.
 
-    - A figure that displays an array of squares corresponding to each 1-second epoch of each component. Each square is colored based on its activation difference from the mean.
+    <span style="color:green">B.</span> A figure that displays the IC Label classification breakdown for each component.
 
-    - A figure that displays the IC Label classification breakdown for each component
+    <span style="color:blue">C.</span> A window that shows the channel EEG data.
 
-    - A window that shows the component EEG data. This is the window that you will be interacting with as you QC.
+    <span style="color:yellow">D.</span> A figure that displays an array of squares corresponding to each 1-second epoch of each component. Each square is colored based on its activation difference from the mean.
 
-    - Window(s) with a topography for each component. The number label for each topography can be clicked to gain more information, such as the component's spectrum, dipole location, and a mini scroll plot of the full waveform for the selected component.
+    <span style="color:violet">E.</span> Window(s) with a topography for each component. The number label for each topography can be clicked to gain more information.
 
-    **Add an image of all the windows (FIXME).** 
+    <span style="color:orange">F.</span> Upon clicking a number label for a component a figure appears which displays the component's spectrum, dipole location, and a mini scroll plot of the full waveform of the selected component.
 
-    - When you finish the QC procedure, click **Update EEG Structure** and it will save as a `*_qcr.set` and a `*_qcr.fdt` file.
+   ![QC Screen Center]({{ page.root }}/fig/qc_screen_center.png)
+   ![QC Screen Left]({{ page.root }}/fig/qc_screen_left.png)
+   ![QC Screen Right]({{ page.root }}/fig/qc_screen_right.png)
+   ![QC Topo Popup]({{ page.root }}/fig/qc_topo_popup.png)
+
+- When you finish the QC procedure, click **Update EEG Structure** and it will save as a `*_qcr.set` and a `*_qcr.fdt` file.
 
 {% include links.md %}
 
