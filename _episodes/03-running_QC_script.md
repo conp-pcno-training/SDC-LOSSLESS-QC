@@ -56,7 +56,7 @@ keypoints:
 
     <span style="color:green">B.</span> A figure that displays the IC Label classification breakdown for each component.
 
-    <span style="color:blue">C.</span> A window that shows the channel EEG data.
+    <span style="color:blue">C.</span> A window that shows the channel EEG data. It also contains an overlay feature that can be toggled on/off or updated while quality checking. This overlay shows a projection of the remaining components not flagged as "manual" back to the scalp data and overlayed on top of the original EEG data. This allows us to see the effect of removing or adding a component back into the data while we are performing the quality check.
 
     <span style="color:yellow">D.</span> A figure that displays an array of squares corresponding to each 1-second epoch of each component. Each square is colored based on its activation difference from the mean.
 

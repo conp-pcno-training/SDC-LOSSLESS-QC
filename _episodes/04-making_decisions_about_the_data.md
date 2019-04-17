@@ -39,22 +39,22 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 1]({{ page.root }}/fig/qc_flowchart_01.png){:height="580px" width="408px"}
+> > ![Flow Chart 1]({{ page.root }}/fig/qc_flowchart_01.png "Flow Chart 1"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
-> > ![Scroll Plot 1a]({{ page.root }}/fig/qc_example_01a.png)
+> > ![Scroll Plot 1a]({{ page.root }}/fig/qc_example_01a.png "Scroll Plot - Example 1a")
 > > Component 11 in this example has a large artefact that is affecting the EEG channel data and the rest of the component is flat. Because the rest of the component does not appear to contain much cortical data, it is preferable to remove the component with the isolated artefact compared to removing time.
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 2
+> > ## Example B
 > >
-> > ![Scroll Plot 1b]({{ page.root }}/fig/qc_example_01b.png)
+> > ![Scroll Plot 1b]({{ page.root }}/fig/qc_example_01b.png "Scroll Plot - Example 1b")
 > > There are many large artefacts in otherwise flat components. Although there are several artefacts at the same time, they are all occurring in components that are otherwise flat. Removing each of these components would be the best decision here.
 > >
 > > {: .output}
@@ -68,14 +68,14 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 2]({{ page.root }}/fig/qc_flowchart_02.png){:height="580px" width="408px"}
+> > ![Flow Chart 2]({{ page.root }}/fig/qc_flowchart_02.png "Flow Chart 2"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
-> > ![Scroll Plot 2]({{ page.root }}/fig/qc_example_02.png)
+> > ![Scroll Plot 2]({{ page.root }}/fig/qc_example_02.png "Scroll Plot - Example 2a")
 > > At 1141 seconds, there is what appears to be an artefact in component 11. However when looking at the EEG channel data, there is no significant artefact at this time point. Using the projected overlay is particularly helpful for determining that data with the remaining components is clean. Because the EEG channel data appears to be within a reasonable range across all channels at that time point, we can leave the component and time period in.
 > >
 > > {: .output}
@@ -89,31 +89,31 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 3]({{ page.root }}/fig/qc_flowchart_03.png){:height="580px" width="408px"}
+> > ![Flow Chart 3]({{ page.root }}/fig/qc_flowchart_03.png "Flow Chart 3"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
-> > ![Scroll Plot 3a]({{ page.root }}/fig/qc_example_03a.png)
+> > ![Scroll Plot 3a]({{ page.root }}/fig/qc_example_03a.png "Scroll Plot - Example 3a")
 > > During the time periods around 585-587 seconds and 597-599 seconds, there are several components that contain artefacts. For these time periods, we would answer no to the first question because several components that have artefacts are not flat. For the second question, we would answer yes because several channels are being affected by these artefacts in the scalp EEG data. For the third question, we would answer yes because there are multiple components with artefacts during this time period. In this example, we would prefer to flag the time period for removal over removing every component that has an artefact. We would have to remove too many components in order to clean up this time period so it is better to remove the time period instead. We can also use the orange AMICA marks to help make this decision. The lighter highlight that is seen during this time period indicates that the three parallel AMICA procedures did not replicate during this time period.
 > >    
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 2
+> > ## Example B
 > >
-> > ![Scroll Plot 3b]({{ page.root }}/fig/qc_example_03b.png)
+> > ![Scroll Plot 3b]({{ page.root }}/fig/qc_example_03b.png "Scroll Plot - Example 3b")
 > > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would be the best decision here.
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 3
+> > ## Example C
 > >
-> > ![Scroll Plot 3c]({{ page.root }}/fig/qc_example_03c.png)
+> > ![Scroll Plot 3c]({{ page.root }}/fig/qc_example_03c.png "Scroll Plot - Example 3c")
 > > At the time period around 542-544 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would be the best decision here.
 > >
 > > {: .output}
@@ -127,15 +127,15 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 4]({{ page.root }}/fig/qc_flowchart_04.png){:height="580px" width="408px"}
+> > ![Flow Chart 4]({{ page.root }}/fig/qc_flowchart_04.png "Flow Chart 4"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
-> > ![Scroll Plot 4a]({{ page.root }}/fig/qc_example_04a.png)
-> > ![Scroll Plot 4b]({{ page.root }}/fig/qc_example_04b.png)
+> > ![Scroll Plot 4a.1]({{ page.root }}/fig/qc_example_04a1.png "Scroll Plot - Example 4a.1")
+> > ![Scroll Plot 4a.2]({{ page.root }}/fig/qc_example_04a2.png "Scroll Plot - Example 4a.2")
 > > The top cortical components are mixed with slow waves (sweat artefacts). This is an ambiguous case because on the one hand we definitely want to remove the sweat artefacts, but on the other hand we don't want to remove any cortical data. In this case we would lean towards removing these components, but we ultimately need to decide based on the projected overlay whether or not too much good cortical data appears to be removed from the scalp waveforms.
 > >     
 > > If we use the flow chart on the top two components, we would answer no to the first question because the rest of the components aren't flat. We would answer yes to the second question because the artefacts are substantially affecting the EEG channel data, and we would answer no to the third question because for most of the time periods, it is only 2 components that have large artefacts. The components have artefacts that are continually affecting the EEG channel data, so we would answer yes to question 4, which leads to marking the components as ambiguous and flagging them for removal. The artefacts are occurring too often so removing the time period for each artefact is not an option. The artefacts are also isolated to the top two components meaning that removing these components would remove the artefacts from the channel data. Although the component does appear to have some good cortical data, in this case it is best to remove these components, because the resulting projection does not appear to visibly affect areas of good cortical signal, meaning we are losing little to no cortical signal by removing these components. 
@@ -151,14 +151,15 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 5]({{ page.root }}/fig/qc_flowchart_05.png){:height="580px" width="408px"}
+> > ![Flow Chart 5]({{ page.root }}/fig/qc_flowchart_05.png "Flow Chart 5"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
-> > Add image of component plot corresponding to this example (FIXME).
+> > ![Scroll Plot 5a]({{ page.root }}/fig/qc_example_05a.png "Scroll Plot - Example 5a")
+> > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at time point 2181-2183 there is a brief but sharp spike in the component activation. Removing these components would be removing good cortical data, so in this case it would be best to remove the time period instead.
 > >
 > > {: .output}
 > {: .solution}
@@ -171,12 +172,12 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 6]({{ page.root }}/fig/qc_flowchart_06.png){:height="580px" width="408px"}
+> > ![Flow Chart 6]({{ page.root }}/fig/qc_flowchart_06.png "Flow Chart 6"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
 > > Add image of component plot corresponding to this example (FIXME).
 > >
@@ -191,12 +192,12 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 7]({{ page.root }}/fig/qc_flowchart_07.png){:height="580px" width="408px"}
+> > ![Flow Chart 7]({{ page.root }}/fig/qc_flowchart_07.png "Flow Chart 7"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
 > > Add image of component plot corresponding to this example (FIXME).
 > >
@@ -211,12 +212,12 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > {: .source}
 >
 > > ## See flow chart
-> > ![Flow Chart 8]({{ page.root }}/fig/qc_flowchart_08.png){:height="580px" width="408px"}
+> > ![Flow Chart 8]({{ page.root }}/fig/qc_flowchart_08.png "Flow Chart 8"){:height="580px" width="408px"}
 > >
 > > {: .output}
 > {: .solution}
 >
-> > ## Example 1
+> > ## Example A
 > >
 > > Add image of component plot corresponding to this example (FIXME).
 > >
