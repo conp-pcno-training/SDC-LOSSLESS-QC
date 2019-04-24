@@ -21,7 +21,7 @@ During the quality check, our goal is to remove components or time periods that 
 
 Unfortunately, there is no exact science to determining whether something is or isn't an artefact, and therefore some artefacts will be difficult to identify because they are ambiguous, meaning they may or may not still contain cortical data. These decisions will be more subjective, and based on a number of qualitative factors. Nonetheless, with a bit of practice most artefacts become easy to identify, and the best decision should be fairly obvious.
 
-The pipeline will manually mark out components when ICLabel considers them primarily (i.e. eye, channel noise, muscle, heart, and line noise components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality check procedure. You will scroll through the data and make decisions about removing components and time periods that are artefactual.
+The pipeline will manually mark out components when ICLabel considers them to be primarily an artefact (i.e. eye, channel noise, muscle, heart, and line noise components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality check procedure. You will scroll through the data and make decisions about removing or leaving in components and periods of time that may or may not contain artefacts.
 
 **NOTE:** When making decisions about components, only remaining time periods should be considered because time periods with a manual marking are already marked for removal.
 
@@ -159,7 +159,7 @@ The pipeline will manually mark out components when ICLabel considers them prima
 > > ## Example A
 > >
 > > ![Scroll Plot 5a]({{ page.root }}/fig/qc_example_05a.png "Scroll Plot - Example 5a")
-> > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at time point 2181-2183 there is a brief but sharp spike in the component activation. Removing these components would be removing good cortical data, so in this case it would be best to remove the time period instead.
+> > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at 2181-2183 seconds there is a brief but sharp spike in the component activation. Removing these components would be removing good cortical data, so in this case it would be best to remove the time period instead.
 > >
 > > {: .output}
 > {: .solution}
@@ -179,8 +179,9 @@ The pipeline will manually mark out components when ICLabel considers them prima
 >
 > > ## Example A
 > >
-> > Add image of component plot corresponding to this example (FIXME).
-> >
+> > ![Scroll Plot 6a.1]({{ page.root }}/fig/qc_example_06a1.png "Scroll Plot - Example 6a.1")
+> > ![Scroll Plot 6a.2]({{ page.root }}/fig/qc_example_06a2.png "Scroll Plot - Example 6a.2")
+> > Component 5 has a period of square waves at the time period between 292-300 seconds. The topographical data and the shape of the waveform suggest that this component contains cortical data, so the best decision would be to leave the component and remove the time period with the artefacts.
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -199,7 +200,17 @@ The pipeline will manually mark out components when ICLabel considers them prima
 >
 > > ## Example A
 > >
-> > Add image of component plot corresponding to this example (FIXME).
+> > ![Scroll Plot 7a.1]({{ page.root }}/fig/qc_example_07a1.png "Scroll Plot - Example 7a.1")
+> > ![Scroll Plot 7a.2]({{ page.root }}/fig/qc_example_07a2.png "Scroll Plot - Example 7a.2")
+> > Component 2 has a period of square waves at the time period between 292-298 seconds. The topographical data suggests that this is likely an eye component and the overlay waveforms are not affected much by removing this component other than getting rid of the artefact from the affected channels. The best decision here would be to remove the component.
+> > {: .output}
+> {: .solution}
+> >
+> > ## Example B
+> >
+> > ![Scroll Plot 7b.1]({{ page.root }}/fig/qc_example_07b1.png "Scroll Plot - Example 7b.1")
+> > ![Scroll Plot 7b.2]({{ page.root }}/fig/qc_example_07b2.png "Scroll Plot - Example 7b.2")
+> > Component 4 has a period of square waves at the time period between 150-159 seconds. The topographical data suggests that this is likely an eye component and the overlay waveforms are not affected much by removing this component other than getting rid of the artefact from the affected channels. The best decision here would be to remove the component.
 > >
 > > {: .output}
 > {: .solution}
