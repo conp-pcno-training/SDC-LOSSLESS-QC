@@ -28,7 +28,9 @@ The pipeline will manually mark out components when ICLabel considers them to be
 ## Decision Flow Chart
 
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
-*This decision flow chart can be used during the quality check procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.*
+*This decision flow chart can be used during the quality check procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.* 
+
+**NOTE:** This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.
 
 ## Examples
 
@@ -136,9 +138,9 @@ The pipeline will manually mark out components when ICLabel considers them to be
 > >
 > > ![Scroll Plot 4a.1]({{ page.root }}/fig/qc_example_04a1.png "Scroll Plot - Example 4a.1")
 > > ![Scroll Plot 4a.2]({{ page.root }}/fig/qc_example_04a2.png "Scroll Plot - Example 4a.2")
-> > The top cortical components are mixed with slow waves (sweat artefacts). This is an ambiguous case because on the one hand we definitely want to remove the sweat artefacts, but on the other hand we don't want to remove any cortical data. In this case we would lean towards removing these components, but we ultimately need to decide based on the projected overlay whether or not too much good cortical data appears to be removed from the scalp waveforms.
+> > The top cortical components are mixed with slow waves (sweat artefacts). This is an ambiguous case because on the one hand we definitely want to remove the sweat artefacts, but on the other hand we don't want to remove any cortical data. In this case we would lean towards removing these components, but we ultimately need to decide whether or not too much good cortical data appears to be removed from the scalp waveforms based on visual inspection of the projected overlay.
 > >     
-> > If we use the flow chart on the top two components, we would answer no to the first question because the rest of the components aren't flat. We would answer yes to the second question because the artefacts are substantially affecting the EEG channel data, and we would answer no to the third question because for most of the time periods, it is only 2 components that have large artefacts. The components have artefacts that are continually affecting the EEG channel data, so we would answer yes to question 4, which leads to marking the components as ambiguous and flagging them for removal. The artefacts are occurring too often so removing the time period for each artefact is not an option. The artefacts are also isolated to the top two components meaning that removing these components would remove the artefacts from the channel data. Although the component does appear to have some good cortical data, in this case it is best to remove these components, because the resulting projection does not appear to visibly affect areas of good cortical signal, meaning we are losing little to no cortical signal by removing these components. 
+> > If we use the flow chart on the top two components, we would answer no to the first question because the rest of the components aren't flat. We would answer yes to the second question because the artefacts are substantially affecting the EEG channel data, and we would answer no to the third question because for most of the time periods, it is only two components that have large artefacts. The components contain artefacts that are continually affecting the EEG channel data, so we would answer yes to question 4, which leads to marking the components as ambiguous and flagging them for removal. The artefacts are occurring too often, so removing the time period for each artefact is not an option. Although the component does appear to contain what appears to be good cortical data, in this case it is best to remove these components because the resulting projection does not appear to visibly affect areas of good cortical signal, meaning we are losing little to no cortical signal by removing these components. 
 > > 
 > > {: .output}
 > {: .solution}
@@ -159,7 +161,7 @@ The pipeline will manually mark out components when ICLabel considers them to be
 > > ## Example A
 > >
 > > ![Scroll Plot 5a]({{ page.root }}/fig/qc_example_05a.png "Scroll Plot - Example 5a")
-> > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at 2181-2183 seconds there is a brief but sharp spike in the component activation. Removing these components would be removing good cortical data, so in this case it would be best to remove the time period instead.
+> > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at 2181-2183 seconds there is a brief but sharp spike in the component activation. Removing these components would likely be removing good cortical data, so in this case it would be best to remove the time period instead.
 > >
 > > {: .output}
 > {: .solution}
@@ -215,26 +217,5 @@ The pipeline will manually mark out components when ICLabel considers them to be
 > > {: .output}
 > {: .solution}
 {: .challenge}
-
-> ## Case 8
-> 
-> The component is not flat, the artefact is large and/or affects many channels, it is isolated to one or two components with only a few other artefacts in them, and the topos and ICLabel info suggest a potentially cortical or mixed signal.
-> 
-> {: .source}
->
-> > ## See flow chart
-> > ![Flow Chart 8]({{ page.root }}/fig/qc_flowchart_08.png "Flow Chart 8"){:height="580px" width="408px"}
-> >
-> > {: .output}
-> {: .solution}
->
-> > ## Example A
-> >
-> > Add image of component plot corresponding to this example (FIXME).
-> >
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
 
 {% include links.md %}
