@@ -23,14 +23,22 @@ Unfortunately, there is no exact science to determining whether something is or 
 
 The pipeline will manually mark out components when ICLabel considers them to be primarily an artefact (i.e. eye, channel noise, muscle, heart, and line noise components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality check procedure. You will scroll through the data and make decisions about removing or leaving in components and periods of time that may or may not contain artefacts.
 
-**NOTE:** When making decisions about components, only remaining time periods should be considered because time periods with a manual marking are already marked for removal.
+> ## Note
+> When making decisions about components, only remaining time periods should be considered because time periods with a manual marking are already marked for removal.
+>
+> {: .source}
+{: .callout}
 
 ## Decision Flow Chart
 
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
 *This decision flow chart can be used during the quality check procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.* 
 
-**NOTE:** This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.
+> ## Note
+> This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.
+>
+> {: .source}
+{: .callout}
 
 ## Examples
 
