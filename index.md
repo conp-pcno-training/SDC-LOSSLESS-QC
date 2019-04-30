@@ -18,7 +18,7 @@ The quality check (QC) procedure is the process of reviewing the decisions the p
 
 - After the `qc_init.htb` script is run, you will have a corresponding `*_qc.set` file.
 
-- The QC procedure is run on the `*_qc.set` files.
+- The QC procedure is run on the `*_qc.set` files and outputs `*_qcr.set` files.
 
 > ## Prerequisites
 - MATLAB

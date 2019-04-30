@@ -58,7 +58,7 @@ keypoints:
     >> find derivatives/lossless/sub-* -type f -name "*_ll.set"
     ```
 
-11. This will print a list of all your `*_ll.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
+11. This will print a list of all your `*_ll.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line. If you are using the BIDS folder structure, a simpler method is to use the `| Bids import |` button, navigate to `derivatives/lossless/`, and click `| Ok |` to automatically populate the list with all the `*_ll.set` files.
 
 12. Click `| Ok |` to start the qc_init batch process.
 
