@@ -9,10 +9,9 @@ objectives:
 keypoints:
 - "Left-clicking toggles the highlight tool"
 - "Right-clicking over a component will add or remove the manual mark"
-- "Clicking **'m'** over a highlighted time period will add the manual mark"
-- "Clicking **'a'** will mark a component ambiguous"
-- "The overlay can be turned on and off by clicking **'o'** and updated by clicking **'u'**"
-
+- "Pressing the **'m'** key over a highlighted time period will add the manual mark"
+- "Pressing the **'a'** key will mark a component ambiguous"
+- "The overlay can be turned on and off by pressing **'o'** and updated by pressing **'u'**"
 ---
 
 Throughout the quality check procedure you will be interacting with various windows. The EEG component data window is the main window you will be interacting with and this is where the marks structure will be saved. 
@@ -21,7 +20,7 @@ Throughout the quality check procedure you will be interacting with various wind
 
 2. **Marking out time:** To mark out time you interact with the component data window. You can use the winrej highlighting tool and left click at the start of the time period that you want to mark for removal and then move the mouse to the end of the time period and left click again. This will highlight the time period light blue. Then hover the mouse over the time period and click **'m'** on the keyboard to add the gray manual mark. If you want to add time that has a non-manual marking (such as ic_hg), you can hover over the marking and select **'s'** on the keyboard. This will select that time period and you can then press **'m'** to add the manual marking to this time period. 
 
-3. **Adding time back in:** Time that the pipeline marked for removal can also be added back in. If you hover over the selected area that you want to add back in and press **[shift]+'m'** the manual marking will be removed. You can then click on the selected area to remove the blue winrej highlight. 
+3. **Adding time back in:** Time that the pipeline marked for removal can also be added back in. If you hover over the selected area that you want to add back in and press **[shift + M]** the manual marking will be removed. You can then click on the selected area to remove the blue winrej highlight. 
 
 4. **Marking a component ambiguous:** The ambiguous mark is used to identify components that are difficult to classify as either artefact or not. To add the manual mark, hover over the component and press **'a'** on the keyboard. Marking a component ambiguous will change the component colour to purple, which is helpful to keep track of a component throughout a file. For example, the ambiguous mark can be useful when you are deciding between removing a time period or a component due to isolated artefacts and you want to see if the component has more artefacts throughout the file. 
 

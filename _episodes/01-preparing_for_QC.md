@@ -7,7 +7,11 @@ questions:
 objectives:
 - "Preparing files from the pipeline for QC."
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "The input is `*_ll.set` files."
+- "Currently only works in MATLAB 2014b or later versions."
+- "You need to add the **matconvnet** folder (and subfolders) to your path every time."
+- "You only need to run the `vl_compilenn` command once per study."
+- "The output is `*_qc.set` files ready for the QC procedure."
 ---
 
 1. Open MATLAB (2014b or later).
@@ -16,37 +20,47 @@ keypoints:
 
 3. In the MATLAB Command Window, set the path for eeglab and its plugins, and open eeglab: 
 
-    `>> addpath code`  
-    `>> lossless_path`  
-    `>> eeglab`
+    ```matlab
+    >> addpath code
+    >> lossless_path
+    >> eeglab
+    ```
 
 4. Add the matconvnet folder and its subdirectories to the MATLAB path: 
 
-    `>> addpath(genpath('derivatives/lossless/code/dependencies/eeglab_asr_amica/plugins/ICLabel0.3/matconvnet'));`
+    ```matlab
+    >> addpath(genpath('derivatives/lossless/code/dependencies/eeglab_asr_amica/plugins/ICLabel0.3/matconvnet'));
+    ```
 
 5. Finally, compile the matconvnet binaries for IC Label:
 
-    `>> vl_compilenn` (this only has to be done once per study)
+    ```matlab
+    >> vl_compilenn %% this only needs to be done once per study
+    ```
 
 6. To run the `qc_init.htb` script, go to the main EEGLAB window and click **File->Batch->Run History Template Batch**.
 
     ![Run History Template Batch Menu]({{ page.root }}/fig/runhtb_qc_init.png)
 
-7. In the **Run History Template Batch** window, add a Context configuration file by clicking **Load context config**. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
+7. In the **Run History Template Batch** window, add a Context configuration file by clicking `| Load context config |`. The default file will be sufficient for this task: `derivatives/loseless/code/config/contextconfig.cfg`. 
 
-8. Click **History File** and add the `qc_init.htb` script located in `derivatives/loseless/code/scripts/`.
+8. Click `| History File |` and add the `qc_init.htb` script located in `derivatives/loseless/code/scripts/`.
 
 9. Open up a terminal window, and navigate to your local project directory:
 
-    `>> cd path/to/project/directory/face_13/`
+    ```bash
+    >> cd path/to/project/directory/face_13/
+    ```
 
 10. List all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
 
-    `>> find derivatives/lossless/sub-* -type f -name "*_ll.set"`
+    ```bash
+    >> find derivatives/lossless/sub-* -type f -name "*_ll.set"
+    ```
 
 11. This will print a list of all your `*_ll.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
 
-12. Click **Ok** to start the qc_init batch process.
+12. Click `| Ok |` to start the qc_init batch process.
 
 {% include links.md %}
 
