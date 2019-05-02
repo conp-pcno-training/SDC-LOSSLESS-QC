@@ -1,6 +1,6 @@
 ---
 title: "Making Decisions About the Data"
-teaching: 25
+teaching: 30
 exercises: 0
 questions:
 - "What decisions can be made about the data?"
@@ -116,7 +116,7 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 > > ## Example B
 > >
 > > ![Scroll Plot 3b]({{ page.root }}/fig/qc_example_03b.png "Scroll Plot - Example 3b")
-> > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would be the best decision here.
+> > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would likely be the best decision here. The time periods between 988 and 989, and between 992 - 994 are a bit more ambiguous because the artefacts aren't very large, and removing the lower components would probably be sufficient in order to leave in those time periods.
 > >
 > > {: .output}
 > {: .solution}
