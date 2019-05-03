@@ -69,6 +69,14 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 > >
 > > {: .output}
 > {: .solution}
+>
+> > ## Example C
+> >
+> > ![Scroll Plot 1c]({{ page.root }}/fig/qc_example_01c.png "Scroll Plot - Example 1c")
+> > Component 34 has a couple large artefacts, and is otherwise quite flat. The waveform doesn't suggest cortical activity and the overlay shows that removing this component only appears to remove the artefacts without visibly removing any good cortical data. Removing the component is the best decision here.
+> >
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Case 2
@@ -152,6 +160,23 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 > > 
 > > {: .output}
 > {: .solution}
+>
+> > ## Example B
+> >
+> > ![Scroll Plot 4b]({{ page.root }}/fig/qc_example_04b.png "Scroll Plot - Example 4b")
+> > Component 16 has an artefact between 2005-2007 seconds. It also contains a number of other artefacts throughout the file and the component does not visibly appear to contribute any cortical data, based on the overlay projection. In this case, it is best to remove the component.
+> >
+> > {: .output}
+> {: .solution}
+>
+> > ## Example C
+> >
+> > ![Scroll Plot 4c]({{ page.root }}/fig/qc_example_04c.png "Scroll Plot - Example 4c")
+> > Although component 5 may look like it contains some cortical signal, there is a clear regular spike appearing a couple times per second, which suggests a heart artefact. This is affecting many good channels throughout the entire recording, and also removing the artefact does not appear to affect the cortical signal when inspecting the overlay in the channel scroll plot, so it is best to remove the component.
+> >
+> > {: .output}
+> {: .solution}
+>
 {: .challenge}
 
 > ## Case 5
@@ -170,6 +195,14 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 > >
 > > ![Scroll Plot 5a]({{ page.root }}/fig/qc_example_05a.png "Scroll Plot - Example 5a")
 > > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at 2181-2183 seconds there is a brief but sharp spike in the component activation. Removing these components would likely be removing good cortical data, so in this case it would be best to remove the time period instead.
+> >
+> > {: .output}
+> {: .solution}
+>
+> > ## Example B
+> >
+> > ![Scroll Plot 5b]({{ page.root }}/fig/qc_example_05b.png "Scroll Plot - Example 5b")
+> > Component 14 has an artefact between 67 - 69 seconds. The rest of the component does not appear to contain any other artefacts and it also suggests it might include some cortical activity. Although it is slightly ambiguous whether or not this component contains cortical signal, only one time period is affected, so it would be safest to leave the component in and flag the time period. If it turns out the component contains more artefacts throughout the recording as we keep scrolling through, we may want to consider removing the component if it does not appear to visibly attenuate the cortical signal in the projected overlay in the EEG scroll plot. Ideally, we would not want to flag too many time periods, but in this case this is only a single time period so flagging that time period is likely the best decision.
 > >
 > > {: .output}
 > {: .solution}
