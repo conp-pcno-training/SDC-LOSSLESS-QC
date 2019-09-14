@@ -1,9 +1,9 @@
 ---
-title: "Preparing for the Quality Check Procedure"
+title: "Preparing for the Quality Control Procedure"
 teaching: 10
 exercises: 5
 questions:
-- "How do I get my files from the lossless pipeline ready for quality checking?"
+- "How do I get my files from the lossless pipeline ready for quality controlling?"
 objectives:
 - "Preparing files from the pipeline for QC."
 keypoints:
@@ -16,12 +16,12 @@ keypoints:
 
 1. Open MATLAB (2014b or later).
 
-2. Navigate to the pipeline root directory (in this tutorial, that will be the face_13 folder).
+2. Navigate to the pipeline root directory (in this tutorial, that will be the Face_13 folder).
 
 3. In the MATLAB Command Window, set the path for eeglab and its plugins, and open eeglab: 
 
     ```matlab
-    >> addpath code
+    >> addpath derivatives/BIDS-Lossless-EEG/code/install
     >> lossless_path
     >> eeglab
     ```
@@ -29,7 +29,7 @@ keypoints:
 4. Add the matconvnet folder and its subdirectories to the MATLAB path: 
 
     ```matlab
-    >> addpath(genpath('derivatives/lossless/code/dependencies/eeglab_asr_amica/plugins/ICLabel0.3/matconvnet'));
+    >> addpath(genpath('derivatives/BIDS-Lossless-EEG/code/dependencies/eeglab_asr_amica/plugins/ICLabel0.3/matconvnet'));
     ```
 
 5. Finally, compile the matconvnet binaries for IC Label:
@@ -49,16 +49,16 @@ keypoints:
 9. Open up a terminal window, and navigate to your local project directory:
 
     ```bash
-    >> cd path/to/project/directory/face_13/
+    >> cd path/to/project/directory/Face_13/
     ```
 
 10. List all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
 
     ```bash
-    >> find derivatives/lossless/sub-* -type f -name "*_ll.set"
+    >> find derivatives/BIDS-Lossless-EEG/sub-* -type f -name "*_ll.set"
     ```
 
-11. This will print a list of all your `*_ll.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line. If you are using the BIDS folder structure, a simpler method is to use the `| Bids import |` button, navigate to `derivatives/lossless/`, and click `| Ok |` to automatically populate the list with all the `*_ll.set` files.
+11. This will print a list of all your `*_ll.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line. If you are using the BIDS folder structure, a simpler method is to use the `| Bids import |` button, navigate to `derivatives/BIDS-Lossless-EEG/`, and click `| Ok |` to automatically populate the list with all the `*_ll.set` files.
 
 12. Click `| Ok |` to start the qc_init batch process.
 

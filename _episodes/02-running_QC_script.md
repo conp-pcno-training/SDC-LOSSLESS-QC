@@ -1,22 +1,24 @@
 ---
-title: "Running the Quality Check Script"
+title: "Running the Quality Control Script"
 teaching: 5
 exercises: 10
 questions:
-- "How do I run the quality check procedure?"
+- "How do I run the quality control procedure?"
+- "What does the quality control procedure look like?"
 objectives:
-- "Understand how to start the quality check procedure."
+- "Understand how to start the quality control procedure."
+- "Become familiar with the figures displayed during quality control."
 keypoints:
 - "The input is `*_qc.set` files."
 - "The output is `*_qcr.set` files ready for segmentation and further processing."
 ---
 
-1. Open MATLAB (pre-2014b works fastest) and change your **Current Folder** by navigating to the Lossless pipeline root directory (in this case, `face_13`).
+1. Open MATLAB (pre-2014b works fastest) and change your **Current Folder** by navigating to the Lossless pipeline root directory (in this case, `Face_13`).
 
 2. Open EEGLAB by typing the following into the console window:
 
     ```matlab
-    >> addpath code
+    >> addpath derivatives/BIDS-Lossless-EEG/code/install
     >> lossless_path
     >> eeglab
     ```
@@ -34,25 +36,25 @@ keypoints:
 
     ![Vised Config Dropdown Menu]({{ page.root }}/fig/visedconfig_dropdown.png)
 
-4. Add the vised configuration file by clicking `| Load vised config |` and then navigate to the config folder (`derivatives/lossless/code/config/`). Select the file named `vised_config_qc.cfg`, and click `| OK |`. The vised configuration file will load certain settings that are preferable for the QC procedure.
+4. Add the vised configuration file by clicking `| Load vised config |` and then navigate to the config folder (`derivatives/BIDS-Lossless-EEG/code/config/`). Select the file named `vised_config_qc.cfg`, and click `| OK |`. The vised configuration file will load certain settings that are preferable for the QC procedure.
 
     ![Vised Config Menu]({{ page.root }}/fig/visedconfig.png)
 
-5. In the main eeglab window, navigate to **File->Batch->Run History Template Batch**.
+5. In the main EEGLAB window, navigate to **File->Batch->Run History Template Batch**.
 
     ![Run History Template Batch Menu]({{ page.root }}/fig/runhtb_qc.png)
 
-6. In the **Run History Template Batch** window, add a Context configuration file by clicking `| Load context config |`. The default file will be sufficient for this task: `derivatives/lossless/code/config/contextconfig.cfg`. 
+6. In the **Run History Template Batch** window, add a Context configuration file by clicking `| Load context config |`. The default file will be sufficient for this task: `derivatives/BIDS-Lossless-EEG/code/config/contextconfig.cfg`. 
 
-7. Click `| History File |` and add the `qc.htb` script located in `derivatives/lossless/code/scripts/`.
+7. Click `| History File |` and add the `qc.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.
 
 8. Open up a terminal window, and navigate to your local project directory:
 
-    `>> cd path/to/project/directory/face_13/`
+    `>> cd path/to/project/directory/Face_13/`
 
-9. List all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
+9. In the terminal, list all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
 
-    `>> find derivatives/lossless/sub-* -type f -name "*_qc.set"`
+    `>> find derivatives/BIDS-Lossless-EEG/sub-* -type f -name "*_qc.set"`
 
 10. This will print a list of all your QC-initialized `*_qc.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
 
@@ -60,11 +62,11 @@ keypoints:
 
 12. Once you click `| Ok |`, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
 
-    <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC.
+    <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points.
 
     <span style="color:green">B.</span> A figure that displays the IC Label classification breakdown for each component.
 
-    <span style="color:blue">C.</span> A window that shows the channel EEG data. It also contains an overlay feature that can be toggled on/off or updated while quality checking. This overlay shows a projection of the remaining components not flagged as "manual" back to the scalp data and overlayed on top of the original EEG data. This allows us to see the effect of removing or adding a component back into the data while we are performing the quality check.
+    <span style="color:blue">C.</span> A window that shows the channel EEG data. It also contains an overlay feature that can be toggled on/off or updated while quality controlling. This overlay shows a projection of the remaining components not flagged as "manual" back to the scalp data and overlayed on top of the original EEG data. This allows us to see the effect of removing or adding a component back into the data while we are performing the quality control.
 
     <span style="color:yellow">D.</span> A figure that displays an array of squares corresponding to each 1-second epoch of each component. Each square is colored based on its activation difference from the mean.
 

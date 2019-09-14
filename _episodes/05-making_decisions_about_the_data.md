@@ -3,36 +3,19 @@ title: "Making Decisions About the Data"
 teaching: 30
 exercises: 0
 questions:
-- "What decisions can be made about the data?"
 - "How do I make decisions about components and time periods?"
 objectives:
-- "Understand the benefits and necessity of a manual quality check procedure."
+- "Understand the benefits and necessity of a manual quality control procedure."
 keypoints:
 - "We need to establish an approach that allows us to reliably identify artefacts based on as few subjective factors as possible."
 - "Using the flow chart, most artefacts can be reliably identified and a consistent decision can be made based on the properties of the components."
 - "Despite efforts to create a fully objective set of decision criteria, there will still be cases that are ambiguous. In these cases, we need to use our best judgement to decide what to reject and what to leave in."
 ---
 
-## Description
-
-The Lossless pipeline marked up your data based on the parameters in the configuration files. During the quality check procedure you will be visually inspecting the data and making decisions about components and time periods.
-
-Our goal is to remove components or time periods that contain artefacts. In EEG analysis, an artefact is any period of activation that does not represent cortical signal. Artefacts can be biological (eye blinks, lateral eye movements, muscle movements, hearbeat, etc.) or environmental (screen refresh rates, channel noise from bad electrodes, and other non-biological electromagnetic signals from the surrounding environment). Most artefacts can be identified based on unusually high frequencies or amplitudes compared to those of typical cortical signal.
-
-Unfortunately, there is no exact science to determining whether something is or is not an artefact, and therefore some artefacts will be difficult to identify because they are ambiguous, meaning they may or may not still contain some cortical data. These decisions will be more subjective and based on a number of qualitative factors. Nonetheless, with a bit of practice most artefacts become easy to identify and the best decision should be fairly obvious.
-
-The `qc_init.htb` script will manually mark out components when ICLabel considers them to be primarily an artefact (i.e. eye, channel noise, muscle, heart, and line noise components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality check procedure. You will scroll through the data and make decisions about removing or leaving in components and periods of time that may or may not contain artefacts.
-
-> ## Note
-> When making decisions about components, only remaining time periods should be considered because time periods with a manual marking are already marked for removal.
->
-> {: .source}
-{: .callout}
-
 ## Decision Flow Chart
 
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
-*This decision flow chart can be used during the quality check procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.* 
+*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.* 
 
 > ## Note
 > This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.

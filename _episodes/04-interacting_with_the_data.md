@@ -3,7 +3,7 @@ title: "Interacting with the Data"
 teaching: 15
 exercises: 45
 questions:
-- "How do I make changes while doing the quality check?"
+- "How do I make changes while doing the quality control?"
 objectives:
 - "Understand how to use the keyboard and mouse to interact with the EEG scroll plots to flag and unflag components and periods of time."
 keypoints:
@@ -14,7 +14,7 @@ keypoints:
 - "The overlay can be turned on and off by pressing **'o'** and updated by pressing **'u'**"
 ---
 
-Throughout the quality check procedure you will be interacting with various windows. The EEG component data window is the main window you will be interacting with and this is where the marks structure will be saved. 
+Throughout the quality control procedure you will be interacting with various windows. The EEG component data window is the main window you will be interacting with and this is where the marks structure will be saved. 
 
 1. **Removing or adding back in a component:** Components that are marked for removal will be grayed out and will have a gray flag beside the component on the left hand side of the component data window. To mark out a component you would like removed or to add back a component that has been removed, hover over the component and right click on the mouse. 
 
