@@ -16,7 +16,7 @@ keypoints:
 
 1. Open MATLAB (2014b or later).
 
-2. Navigate to the pipeline root directory (in this tutorial, that will be the Face_13 folder).
+2. Navigate to the pipeline root directory (in this tutorial, that will be the Face13 folder).
 
 3. In the MATLAB Command Window, set the path for eeglab and its plugins, and open eeglab: 
 
@@ -49,7 +49,7 @@ keypoints:
 9. Open up a terminal window, and navigate to your local project directory:
 
     ```bash
-    >> cd path/to/project/directory/Face_13/
+    >> cd path/to/project/directory/Face13/
     ```
 
 10. List all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:

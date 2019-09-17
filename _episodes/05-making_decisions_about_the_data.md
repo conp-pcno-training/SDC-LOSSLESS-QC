@@ -40,7 +40,9 @@ keypoints:
 > > ## Example A
 > >
 > > ![Scroll Plot 1a]({{ page.root }}/fig/qc_example_01a.png "Scroll Plot - Example 1a")
-> > Component 11 in this example has a large artefact that is affecting the EEG channel data and the rest of the component is flat. Because the rest of the component does not appear to contain much cortical data, it is preferable to remove the component with the isolated artefact compared to removing time.
+> > Component 11 in this example has a large artefact that is affecting the EEG channel data and the rest of the component is flat. Because the rest of the component does not appear to contain much cortical data, it is preferable to remove the component with the isolated artefact compared to removing time. To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > >
 > > {: .output}
 > {: .solution}
@@ -48,8 +50,10 @@ keypoints:
 > > ## Example B
 > >
 > > ![Scroll Plot 1b]({{ page.root }}/fig/qc_example_01b.png "Scroll Plot - Example 1b")
-> > There are many large artefacts in otherwise flat components. Although there are several artefacts at the same time, they are all occurring in components that are otherwise flat. Removing each of these components would be the best decision here.
+> > There is a large artefacts in component 20 and this component is otherwise flat. It would be preferable to remove the component over removing time because the artefact is isolated.
 > >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
+> > 
 > > {: .output}
 > {: .solution}
 >
@@ -57,6 +61,8 @@ keypoints:
 > >
 > > ![Scroll Plot 1c]({{ page.root }}/fig/qc_example_01c.png "Scroll Plot - Example 1c")
 > > Component 34 has a couple large artefacts, and is otherwise quite flat. The waveform doesn't suggest cortical activity and the overlay shows that removing this component only appears to remove the artefacts without visibly removing any good cortical data. Removing the component is the best decision here.
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > >
 > > {: .output}
 > {: .solution}
@@ -98,16 +104,19 @@ keypoints:
 > > ## Example A
 > >
 > > ![Scroll Plot 3a]({{ page.root }}/fig/qc_example_03a.png "Scroll Plot - Example 3a")
-> > During the time periods around 585-587 seconds and 597-599 seconds, there are several components that contain artefacts. For these time periods, we would answer no to the first question because several components that have artefacts are not flat. For the second question, we would answer yes because several channels are being affected by these artefacts in the scalp EEG data. For the third question, we would answer yes because there are multiple components with artefacts during this time period. In this example, we would prefer to flag the time period for removal over removing every component that has an artefact. We would have to remove too many components in order to clean up this time period so it is better to remove the time period instead. We can also use the orange AMICA marks to help make this decision. The lighter highlight that is seen during this time period indicates that the three parallel AMICA procedures did not replicate during this time period.
+> > During the time periods around 585-587 seconds and 597-599 seconds, there are several components that contain artefacts. For these time periods, we would answer no to the first question because several components that have artefacts are not flat. For the second question, we would answer yes because several channels are being affected by these artefacts in the scalp EEG data. For the third question, we would answer yes because there are multiple components with artefacts during this time period. In this example, we would prefer to flag the time period for removal over removing every component that has an artefact. We would have to remove too many components in order to clean up this time period so it is better to remove the time period instead. We can also use the orange AMICA marks to help make this decision. The lighter highlight that is seen during this time period indicates that the three parallel AMICA procedures did not replicate during this time period. The orange AMICA bar is oftern lighter during artefactual time periods so this mark can be used as an indicator of artefactual time periods.
 > >    
-> >
+> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
+> > 
 > > {: .output}
 > {: .solution}
 >
 > > ## Example B
 > >
 > > ![Scroll Plot 3b]({{ page.root }}/fig/qc_example_03b.png "Scroll Plot - Example 3b")
-> > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would likely be the best decision here. The time periods between 988 and 989, and between 992 - 994 are a bit more ambiguous because the artefacts aren't very large, and removing the lower components would probably be sufficient in order to leave in those time periods.
+> > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would likely be the best decision here.
+> >    
+> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
 > >
 > > {: .output}
 > {: .solution}
@@ -116,6 +125,8 @@ keypoints:
 > >
 > > ![Scroll Plot 3c]({{ page.root }}/fig/qc_example_03c.png "Scroll Plot - Example 3c")
 > > At the time period around 542-544 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would be the best decision here.
+> >    
+> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
 > >
 > > {: .output}
 > {: .solution}
@@ -140,6 +151,8 @@ keypoints:
 > > The top cortical components are mixed with slow waves (sweat artefacts). This is an ambiguous case because on the one hand we definitely want to remove the sweat artefacts, but on the other hand we don't want to remove any cortical data. In this case we would lean towards removing these components, but we ultimately need to decide whether or not too much good cortical data appears to be removed from the scalp waveforms based on visual inspection of the projected overlay.
 > >     
 > > If we use the flow chart on the top two components, we would answer no to the first question because the rest of the components aren't flat. We would answer yes to the second question because the artefacts are substantially affecting the EEG channel data, and we would answer no to the third question because for most of the time periods, it is only two components that have large artefacts. The components contain artefacts that are continually affecting the EEG channel data, so we would answer yes to question 4, which leads to marking the components as ambiguous and flagging them for removal. The artefacts are occurring too often, so removing the time period for each artefact is not an option. Although the component does appear to contain what appears to be good cortical data, in this case it is best to remove these components because the resulting projection does not appear to visibly affect areas of good cortical signal, meaning we are losing little to no cortical signal by removing these components. 
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > > 
 > > {: .output}
 > {: .solution}
@@ -149,6 +162,8 @@ keypoints:
 > > ![Scroll Plot 4b]({{ page.root }}/fig/qc_example_04b.png "Scroll Plot - Example 4b")
 > > Component 16 has an artefact between 2005-2007 seconds. It also contains a number of other artefacts throughout the file and the component does not visibly appear to contribute any cortical data, based on the overlay projection. In this case, it is best to remove the component.
 > >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
+> >
 > > {: .output}
 > {: .solution}
 >
@@ -156,6 +171,8 @@ keypoints:
 > >
 > > ![Scroll Plot 4c]({{ page.root }}/fig/qc_example_04c.png "Scroll Plot - Example 4c")
 > > Although component 5 may look like it contains some cortical signal, there is a clear regular spike appearing a couple times per second, which suggests a heart artefact. This is affecting many good channels throughout the entire recording, and also removing the artefact does not appear to affect the cortical signal when inspecting the overlay in the channel scroll plot, so it is best to remove the component.
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > >
 > > {: .output}
 > {: .solution}
@@ -178,14 +195,8 @@ keypoints:
 > >
 > > ![Scroll Plot 5a]({{ page.root }}/fig/qc_example_05a.png "Scroll Plot - Example 5a")
 > > Components 21 and 51 appear to have at least some good cortical data in them, and they maintain a fairly consistent signal throughout the recording, but at 2181-2183 seconds there is a brief but sharp spike in the component activation. Removing these components would likely be removing good cortical data, so in this case it would be best to remove the time period instead.
-> >
-> > {: .output}
-> {: .solution}
->
-> > ## Example B
-> >
-> > ![Scroll Plot 5b]({{ page.root }}/fig/qc_example_05b.png "Scroll Plot - Example 5b")
-> > Component 14 has an artefact between 67 - 69 seconds. The rest of the component does not appear to contain any other artefacts and it also suggests it might include some cortical activity. Although it is slightly ambiguous whether or not this component contains cortical signal, only one time period is affected, so it would be safest to leave the component in and flag the time period. If it turns out the component contains more artefacts throughout the recording as we keep scrolling through, we may want to consider removing the component if it does not appear to visibly attenuate the cortical signal in the projected overlay in the EEG scroll plot. Ideally, we would not want to flag too many time periods, but in this case this is only a single time period so flagging that time period is likely the best decision.
+> >    
+> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
 > >
 > > {: .output}
 > {: .solution}
@@ -208,6 +219,9 @@ keypoints:
 > > ![Scroll Plot 6a.1]({{ page.root }}/fig/qc_example_06a1.png "Scroll Plot - Example 6a.1")
 > > ![Scroll Plot 6a.2]({{ page.root }}/fig/qc_example_06a2.png "Scroll Plot - Example 6a.2")
 > > Component 5 has a period of square waves at the time period between 292-300 seconds. The topographical data and the shape of the waveform suggest that this component contains cortical data, so the best decision would be to leave the component and remove the time period with the artefacts.
+> >    
+> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
+> >
 > > {: .output}
 > {: .solution}
 {: .challenge}
@@ -229,6 +243,9 @@ keypoints:
 > > ![Scroll Plot 7a.1]({{ page.root }}/fig/qc_example_07a1.png "Scroll Plot - Example 7a.1")
 > > ![Scroll Plot 7a.2]({{ page.root }}/fig/qc_example_07a2.png "Scroll Plot - Example 7a.2")
 > > Component 2 has a period of square waves at the time period between 292-298 seconds. The topographical data suggests that this is likely an eye component and the overlay waveforms are not affected much by removing this component other than getting rid of the artefact from the affected channels. The best decision here would be to remove the component.
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
+> >
 > > {: .output}
 > {: .solution}
 > >
@@ -237,6 +254,8 @@ keypoints:
 > > ![Scroll Plot 7b.1]({{ page.root }}/fig/qc_example_07b1.png "Scroll Plot - Example 7b.1")
 > > ![Scroll Plot 7b.2]({{ page.root }}/fig/qc_example_07b2.png "Scroll Plot - Example 7b.2")
 > > Component 4 has a period of square waves at the time period between 150-159 seconds. The topographical data suggests that this is likely an eye component and the overlay waveforms are not affected much by removing this component other than getting rid of the artefact from the affected channels. The best decision here would be to remove the component.
+> >
+> > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > >
 > > {: .output}
 > {: .solution}

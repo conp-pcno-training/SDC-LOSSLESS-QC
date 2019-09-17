@@ -13,7 +13,7 @@ keypoints:
 - "The output is `*_qcr.set` files ready for segmentation and further processing."
 ---
 
-1. Open MATLAB (pre-2014b works fastest) and change your **Current Folder** by navigating to the Lossless pipeline root directory (in this case, `Face_13`).
+1. Open MATLAB (pre-2014b works fastest) and change your **Current Folder** by navigating to the Lossless pipeline root directory (in this case, `Face13`).
 
 2. Open EEGLAB by typing the following into the console window:
 
@@ -50,7 +50,7 @@ keypoints:
 
 8. Open up a terminal window, and navigate to your local project directory:
 
-    `>> cd path/to/project/directory/Face_13/`
+    `>> cd path/to/project/directory/Face13/`
 
 9. In the terminal, list all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
 
@@ -62,7 +62,7 @@ keypoints:
 
 12. Once you click `| Ok |`, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
 
-    <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points.
+    <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points. To scroll through the data, use the `<<` and `>>` buttons in this window. These buttons will scroll both the component EEG data and the channel EEG data windows.
 
     <span style="color:green">B.</span> A figure that displays the IC Label classification breakdown for each component.
 
