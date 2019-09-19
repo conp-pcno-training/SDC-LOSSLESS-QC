@@ -19,7 +19,7 @@ The Lossless pipeline marked up your data based on the parameters in the batch c
 
 Our goal is to remove components or time periods that contain artefacts. In EEG analysis, an artefact is any period of activation that does not represent cortical signal. Artefacts can be biological (eye blinks, lateral eye movements, muscle movements, hearbeat, etc.) or environmental (screen refresh rates, channel noise from bad electrodes, etc.). Most artefacts can be identified based on unusually low/high frequencies or amplitudes compared to those of typical cortical signal.
 
-You will scroll through the data and make decisions about removing or leaving in components and periods of time. The manual mark can be added or removed to components and time periods as you QC. When the data is purged following the QC procedure, components, channels, and time periods with a manual mark will be removed.
+You will scroll through the data and make decisions about removing or leaving in components and periods of time. The manual mark allows researchers to flag messy data and can be added or removed to components and time periods as you QC. When the data is purged following the QC procedure, components, channels, and time periods with a manual mark will be removed.
 
 > ## Note
 > When making decisions about components, only remaining time periods should be considered because time periods with a manual marking are already marked for removal.
@@ -45,7 +45,7 @@ When you open a file to perform the QC procedure, there will be channels that ha
 
 ## Component Pipeline Labels
 
-The `qc_init.htb` script will manually mark out components when ICLabel considers them to be primarily an artefact (i.e. eye, channel noise, muscle, and heart components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality control procedure. Components are sorted by the percent data variance accounted for, with the top components accounting for a greater percentage of the channel data. Components are shown in different colours based on thier ICLabel classification. The coloured flag on the left side of each component corresponds with the ICLabel classification. A legend for each ICLabel classification can be found at the top left side of the window above the component scroll data. Some components also have a blue flag on the left side of the data. This blue flag is the ic_rt mark and is given when the component was not replicated across the three runs of the AMICA models. 
+The `qc_init.htb` script will manually mark out components when ICLabel considers them to be primarily an artefact (i.e. eye, channel noise, muscle, and heart components). These components will have a gray manual mark flag and will be grayed out at the beginning of the quality control procedure. Components are sorted by the percent data variance accounted for, with the top components accounting for a greater percentage of the channel data. Components are shown in different colours based on thier ICLabel classification. A legend for each ICLabel classification can be found at the top left side of the window above the component scroll data.
 
 | Label | Description |
 | ------ | -----------------|
@@ -62,7 +62,7 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 
 ## Time Pipeline Labels
 
-The EEG component and channel data has marks throughout the file that relate to time. The time marks are independent of the y-axis (these marks are only related to time and are not related to the location of the components). The criteria used to make decisions about time can be edited through changing parameters in the configuration files. When the pipeline has marked time as artefactual, there will be a coloured mark that relates to why that time period is considered messy, as well as a gray manual mark. 
+The EEG component and channel data has marks throughout the file that relate to time. The time marks are independent of the y-axis (these marks are only related to time and are not related to the location of the components). The criteria used to make decisions about time can be edited through changing parameters in the batch configuration files before running the pipeline. When the pipeline has marked time as artefactual, there will be a coloured mark that relates to why that time period is considered messy, as well as a gray manual mark. 
 
 Throughout the whole file there will be an orange AMICA bar. This bar is related to the level of replication between the three parellel AMICA runs. A lighter orange bar indicates that the three AMICA procedures did not replicate during this time period. The orange AMICA bar will not be at some time periods that are marked as artefactual because these time periods did not run through AMICA.
 
@@ -89,9 +89,9 @@ Throughout the whole file there will be an orange AMICA bar. This bar is related
 
 ![QC Artefact Example]({{ page.root }}/fig/qc_marks_example.png "QC Artefact Example")
 
-This figure is an example of the component EEG data scroll plot. This is the window that you will be interacting with as you QC. As you scroll through the data, ensure that you agree with the decisions that the pipeline made about your data. You will also be looking for artefacts as you scroll through. The above figure has several examples of time periods that the pipeline marked as artefactual for various reasons as well as artefacts that are in components during remaining time periods. 
+This figure is an example of the component EEG data scroll plot. This is the window that you will be interacting with as you QC. As you scroll through the data, ensure that you agree with the decisions that the pipeline made about your data with regards to channels and time periods. You will also be looking for artefacts as you scroll through. The above figure has several examples of time periods that the pipeline marked as artefactual for various reasons as well as artefacts during remaining time periods. 
 
-During the time period of 542-543 seconds, several components have an artefact. These artefact have unusually high amplitudes compared to cortical data and are seen as large spikes. 
+In the above figure, the time periods are being correctly marked for removal because these time periods are artefactual. During the time period of 542-543 seconds, there are several components with an artefact. These artefact have unusually high amplitudes compared to cortical data and are seen as large spikes. Artefacts can be removed from the data by adding a manual mark to the components or time periods. Following episodes will describe how to interact with the data and how to make decisions about removing artefacts. 
 
 
 {% include links.md %}

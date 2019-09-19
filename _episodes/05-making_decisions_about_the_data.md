@@ -15,7 +15,7 @@ keypoints:
 ## Decision Flow Chart
 
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
-*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you.* 
+*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you. When you come across an artefact in the data, you can start at the top of the decision flow chart and ask yourself the questions in the blue boxes. Your answers to these questions will help you make a decision about how to deal with the artefact based on certain properties of the data.* 
 
 > ## Note
 > This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.
@@ -40,7 +40,7 @@ keypoints:
 > > ## Example A
 > >
 > > ![Scroll Plot 1a]({{ page.root }}/fig/qc_example_01a.png "Scroll Plot - Example 1a")
-> > Component 11 in this example has a large artefact that is affecting the EEG channel data and the rest of the component is flat. Because the rest of the component does not appear to contain much cortical data, it is preferable to remove the component with the isolated artefact compared to removing time. To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
+> > Component 11 in this example has a large artefact that is affecting the EEG channel data and the rest of the component is flat. Because the rest of the component does not appear to contain much cortical data, it is preferable to remove the component with the isolated artefact compared to removing time. 
 > >
 > > To remove this component, hover over it and right click the mouse. This will add a manual mark to the component and will gray it out.
 > >
@@ -114,16 +114,6 @@ keypoints:
 > > ## Example B
 > >
 > > ![Scroll Plot 3b]({{ page.root }}/fig/qc_example_03b.png "Scroll Plot - Example 3b")
-> > At the time period around 597-599 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would likely be the best decision here.
-> >    
-> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
-> >
-> > {: .output}
-> {: .solution}
->
-> > ## Example C
-> >
-> > ![Scroll Plot 3c]({{ page.root }}/fig/qc_example_03c.png "Scroll Plot - Example 3c")
 > > At the time period around 542-544 seconds, several components have artefacts and the AMICA orange highlight is lighter during this period. Removing this time period would be the best decision here.
 > >    
 > > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.

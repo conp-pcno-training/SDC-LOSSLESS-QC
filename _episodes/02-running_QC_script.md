@@ -15,7 +15,7 @@ keypoints:
 
 1. Open MATLAB (pre-2014b works fastest) and change your **Current Folder** by navigating to the Lossless pipeline root directory (in this case, `Face13`).
 
-2. Open EEGLAB by typing the following into the console window:
+2. Open EEGLAB by typing the following into the command window:
 
     ```matlab
     >> addpath derivatives/BIDS-Lossless-EEG/code/install
@@ -24,9 +24,9 @@ keypoints:
     ```
 
     > ## Note
-    > If you are using an older version of MATLAB (pre-2014b), you may need to set the default figure renderer to OpenGL:
+    > If you are using an older version of MATLAB (pre-2014b), you may need to set the default figure renderer to OpenGL by typing the following into the command window:
     > ```matlab
-    >> set(0,'DefaultFigureRenderer','OpenGL');
+    >>> set(0,'DefaultFigureRenderer','OpenGL');
     ```
     >
     > {: .source}
@@ -64,7 +64,7 @@ keypoints:
 
     <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points. To scroll through the data, use the `<<` and `>>` buttons in this window. These buttons will scroll both the component EEG data and the channel EEG data windows.
 
-    <span style="color:green">B.</span> A figure that displays the IC Label classification breakdown for each component.
+    <span style="color:green">B.</span> A figure that displays the ICLabel classification breakdown for each component.
 
     <span style="color:blue">C.</span> A window that shows the channel EEG data. It also contains an overlay feature that can be toggled on/off or updated while quality controlling. This overlay shows a projection of the remaining components not flagged as "manual" back to the scalp data and overlayed on top of the original EEG data. This allows us to see the effect of removing or adding a component back into the data while we are performing the quality control.
 
