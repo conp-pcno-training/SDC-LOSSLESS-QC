@@ -10,15 +10,9 @@ The quality control (QC) procedure is the process of reviewing the decisions the
 
 - Quality control is a manual procedure performed on data after it has gone through the pipeline.
 
-- The main output files from the pipeline will be in `*_ll.set` format.
+- The main output files from the pipeline will be in `*.edf` format.
 
-- Before the QC procedure can be run, files must first be QC-initialized. This involves running the `qc_init.htb` script on the files (in MATLAB 2014b or later).
-
-- `qc_init.htb`: performs the IC Label classification procedure.
-
-- After the `qc_init.htb` script is run, you will have a corresponding `*_qc.set` file.
-
-- The QC procedure is run on the `*_qc.set` files and outputs `*_qcr.set` files.
+- The QC procedure is run on the `*.edf` files and outputs `*_qcr.set` files.
 
 > ## Prerequisites
 - MATLAB

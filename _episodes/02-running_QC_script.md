@@ -23,44 +23,42 @@ keypoints:
     >> eeglab
     ```
 
-    > ## Note
-    > If you are using an older version of MATLAB (pre-2014b), you may need to set the default figure renderer to OpenGL by typing the following into the command window:
-    > ```matlab
-    >>> set(0,'DefaultFigureRenderer','OpenGL');
-    ```
-    >
-    > {: .source}
-    {: .callout}
+3. If you are using an older version of MATLAB (pre-2014b), you will need to set the default figure renderer to OpenGL by typing the following into the command window:
 
-3. In the main EEGLAB window, navigate to **File->Vised Configuration**. 
+   
+    ```matlab
+    >> set(0,'DefaultFigureRenderer','OpenGL');
+    ```
+
+4. In the main EEGLAB window, navigate to **File->Vised Configuration**. 
 
     ![Vised Config Dropdown Menu]({{ page.root }}/fig/visedconfig_dropdown.png)
 
-4. Add the vised configuration file by clicking `| Load vised config |` and then navigate to the config folder (`derivatives/BIDS-Lossless-EEG/code/config/`). Select the file named `vised_config_qc.cfg`, and click `| OK |`. The vised configuration file will load certain settings that are preferable for the QC procedure.
+5. Add the vised configuration file by clicking `| Load vised config |` and then navigate to the config folder (`derivatives/BIDS-Lossless-EEG/code/config/`). Select the file named `vised_config_qc.cfg`, and click `| OK |`. The vised configuration file will load certain settings that are preferable for the QC procedure.
 
     ![Vised Config Menu]({{ page.root }}/fig/visedconfig.png)
 
-5. In the main EEGLAB window, navigate to **File->Batch->Run History Template Batch**.
+6. In the main EEGLAB window, navigate to **File->Batch->Run History Template Batch**.
 
     ![Run History Template Batch Menu]({{ page.root }}/fig/runhtb_qc.png)
 
-6. In the **Run History Template Batch** window, add a Context configuration file by clicking `| Load context config |`. The default file will be sufficient for this task: `derivatives/BIDS-Lossless-EEG/code/config/contextconfig.cfg`. 
+7. In the **Run History Template Batch** window, add a Context configuration file by clicking `| Load context config |`. The default file will be sufficient for this task: `derivatives/BIDS-Lossless-EEG/code/config/contextconfig.cfg`. 
 
-7. Click `| History File |` and add the `qc.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.
+8. Click `| History File |` and add the `qc.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.
 
-8. Open up a terminal window, and navigate to your local project directory:
+9. Open up a terminal window, and navigate to your local project directory:
 
     `>> cd path/to/project/directory/Face13/`
 
-9. In the terminal, list all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
+10. In the terminal, list all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
 
     `>> find derivatives/BIDS-Lossless-EEG/sub-* -type f -name "*_qc.set"`
 
-10. This will print a list of all your QC-initialized `*_qc.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
+11. This will print a list of all your QC-initialized `*_qc.set` files, including the path, which you can then copy straight from the terminal into the **file** field in the **Run History Template Batch** window, with one path/filename per line.
 
-11. Click `| Ok |` to start the QC batch process.
+12. Click `| Ok |` to start the QC batch process.
 
-12. Once you click `| Ok |`, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
+13. Once you click `| Ok |`, the QC windows will open for your first file. The files will open in alphabetical order. Several windows will open for each file you QC, including: 
 
     <span style="color:red">A.</span> A window that displays the component EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points. To scroll through the data, use the `<<` and `>>` buttons in this window. These buttons will scroll both the component EEG data and the channel EEG data windows.
 
@@ -79,7 +77,7 @@ keypoints:
     ![QC Screen Right]({{ page.root }}/fig/qc_screen_right.png)
     ![QC Topo Popup]({{ page.root }}/fig/qc_topo_popup.png)
 
-13. When you finish the QC procedure, click `| Update EEG Structure |` and it will save as a `*_qcr.set` and a `*_qcr.fdt` file.
+14. When you finish the QC procedure, click `| Update EEG Structure |` and it will save as a `*_qcr.set` and a `*_qcr.fdt` file.
 
 > ## Note
 > If you would like to cancel the QC procedure in the middle of running a file, you can press `| Update EEG Structure |` at any time, and it will save your progress for that file. You may then resume the work at a later time by rerunning the QC procedure on the saved `*_qcr.set` file. If you would like to cancel the QC procedure at anytime **without** saving the progress, you will need to force quit the QC script by typing **[Ctrl + C]** into the MATLAB command window, which will avoid saving the `*_qcr.set` file.

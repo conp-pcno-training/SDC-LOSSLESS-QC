@@ -15,7 +15,7 @@ keypoints:
 ## Decision Flow Chart
 
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
-*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. This will help you make a decision about the component using information that is provided to you. When you come across an artefact in the data, you can start at the top of the decision flow chart and ask yourself the questions in the blue boxes. Your answers to these questions will help you make a decision about how to deal with the artefact based on certain properties of the data.* 
+*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. When you come across an artefact in the data, you can start at the top of the decision flow chart and ask yourself the questions in the blue boxes. Your answers to these questions will help you make a decision about how to deal with the artefact based on certain properties of the data.* 
 
 > ## Note
 > This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.

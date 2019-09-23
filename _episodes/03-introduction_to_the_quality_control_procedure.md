@@ -62,7 +62,7 @@ The `qc_init.htb` script will manually mark out components when ICLabel consider
 
 ## Time Pipeline Labels
 
-The EEG component and channel data has marks throughout the file that relate to time. The time marks are independent of the y-axis (these marks are only related to time and are not related to the location of the components). The criteria used to make decisions about time can be edited through changing parameters in the batch configuration files before running the pipeline. When the pipeline has marked time as artefactual, there will be a coloured mark that relates to why that time period is considered messy, as well as a gray manual mark. 
+The EEG component and channel data has marks throughout the file that relate to time. The time marks are independent of the y-axis (these marks are only related to time and are not related to the location of the components). The criteria used to make decisions about time can be edited through changing parameters in the batch configuration files before running the pipeline. When the pipeline has marked time as artefactual, there will be a coloured mark that indicates why that time period is considered messy, as well as a gray manual mark. 
 
 Throughout the whole file there will be an orange AMICA bar. This bar is related to the level of replication between the three parellel AMICA runs. A lighter orange bar indicates that the three AMICA procedures did not replicate during this time period. The orange AMICA bar will not be at some time periods that are marked as artefactual because these time periods did not run through AMICA.
 
