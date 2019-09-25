@@ -5,20 +5,20 @@ exercises: 0
 questions:
 - "How do I make decisions about components and time periods?"
 objectives:
-- "Understand the benefits and necessity of a manual quality control procedure."
+- "Understand what constitutes an artefact."
 keypoints:
-- "We need to establish an approach that allows us to reliably identify artefacts based on as few subjective factors as possible."
-- "Using the flow chart, most artefacts can be reliably identified and a consistent decision can be made based on the properties of the components."
-- "Despite efforts to create a fully objective set of decision criteria, there will still be cases that are ambiguous. In these cases, we need to use our best judgement to decide what to reject and what to leave in."
+- "Establishing an approach that allows for reliably identify artefacts based on as few subjective factors as possible."
 ---
 
 ## Decision Flow Chart
 
+The below figure represents an example decision making process for determining the actions a reviewer should take when encountering an artefact in the data.
+
+
 ![QC Decision Flow Chart]({{ page.root }}/fig/qc_flowchart.png "QC Decision Flow Chart"){:height="580px" width="408px"}
-*This decision flow chart can be used during the quality control procedure when you come across a component with an artefact in it. When you come across an artefact in the data, you can start at the top of the decision flow chart and ask yourself the questions in the blue boxes. Your answers to these questions will help you make a decision about how to deal with the artefact based on certain properties of the data.* 
 
 > ## Note
-> This flow chart is meant to be used as a guide only. Ultimately, **you** will be the one to make the final call on what decision to make.
+> This flow chart is meant to be used as a guide only. Ultimately, **the reviewer** will be the one to make the final call on what decision to make.
 >
 > {: .source}
 {: .callout}
@@ -193,30 +193,6 @@ keypoints:
 {: .challenge}
 
 > ## Case 6
-> 
-> The component is not flat, the artefact is large and/or affects many channels, it is isolated to one or two components with only a few other artefacts in them, and the topos and ICLabel info for the components suggest a cortical signal.
-> 
-> {: .source}
->
-> > ## See flow chart
-> > ![Flow Chart 6]({{ page.root }}/fig/qc_flowchart_06.png "Flow Chart 6"){:height="580px" width="408px"}
-> >
-> > {: .output}
-> {: .solution}
->
-> > ## Example A
-> >
-> > ![Scroll Plot 6a.1]({{ page.root }}/fig/qc_example_06a1.png "Scroll Plot - Example 6a.1")
-> > ![Scroll Plot 6a.2]({{ page.root }}/fig/qc_example_06a2.png "Scroll Plot - Example 6a.2")
-> > Component 5 has a period of square waves at the time period between 292-300 seconds. The topographical data and the shape of the waveform suggest that this component contains cortical data, so the best decision would be to leave the component and remove the time period with the artefacts.
-> >    
-> > To mark out a time period, left click the mouse at the start of the time period that you want to mark for removal and then move the mouse to end of the time period and left click again. This will add a blue highlight to the time period. Then hover over the time period and click **'m'** on the keyboard to add a manual mark to this time period.
-> >
-> > {: .output}
-> {: .solution}
-{: .challenge}
-
-> ## Case 7
 > 
 > The component is not flat, the artefact is large and/or affects many channels, it is isolated to one or two components with only a few other artefacts in them, but the topos and ICLabel info for the components do not suggest a cortical signal.
 > 

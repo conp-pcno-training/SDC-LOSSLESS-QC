@@ -4,19 +4,13 @@ root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
 ---
 
-This tutorial will focus on the manual quality control (QC) procedure. We will discuss why it is important, how to set up MATLAB and EEGLAB to perform this procedure, and how to make the most appropriate decisions in terms of which components and/or time periods to mark for removal.  
+This tutorial will focus on the manual quality control (QC) procedure. We will discuss why it is important, how to set up MATLAB and EEGLAB to perform this procedure, and how to make the most appropriate decisions.  
 
-The quality control (QC) procedure is the process of reviewing the decisions the pipeline has made about your data. During this step you can manually remove time periods that are messy and components that contain artefacts, as well as manually adding back time or components that the pipeline has marked for removal. Machine classification of components is not perfectly accurate, so it is still necessary to visually inspect the scroll data to ensure all the correct decisions have been made.
-
-- Quality control is a manual procedure performed on data after it has gone through the pipeline.
-
-- The main output files from the pipeline will be in `*.edf` format.
-
-- The QC procedure is run on the `*.edf` files and outputs `*_qcr.set` files.
+The QC procedure is the process of reviewing the decisions the pipeline has made about the data. During this step you can manually remove time periods components that contain artefacts, as well as manually adding back time or components that the pipeline has marked for removal. This is necessary to ensure accurate decisions have been made because automatic classification of components is not always perfect.
 
 > ## Prerequisites
 - MATLAB
-- All of the previous BIDS, BIDS EEG, and Lossless pipeline lessons
+- All of the previous BIDS EEG, and Lossless pipeline lessons
 - Familiarity with EEGLAB, and the Batch Context and Vised Marks plugins
 {: .prereq}
 
