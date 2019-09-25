@@ -19,10 +19,6 @@ The Lossless state is an EEG data preprocessing technique that relies on indepen
 
 During QC, a reviewer will be interacting with the annotations created by the pipeline. These annotations are split up into three groups: channel, component, and time annotations. Reviewing them is accomplished by scrolling through the data and either making changes to the pipeline's decisions, or adding additional annotations. These decisions are made by the main pipeline scripts (LINK) such as **s01** and are customized by their accompanying batch configuration files.
 
->>>>>>
-You will scroll through the data and make decisions about removing or leaving in components and periods of time. The manual mark allows researchers to flag messy data and can be added or removed to components and time periods as you QC. When the data is purged following the QC procedure, components, channels, and time periods with a manual mark will be removed.
->>>>>>>
-
 ## Artefacts
 
 In EEG analysis, an artefact is any period of activation that does not represent cortical signal. Artefacts can be biological (eye blinks, lateral eye movements, muscle movements, hearbeat, etc.) or environmental (screen noise, channel noise from bad electrodes, etc.). Most artefacts can be identified based on unusually low/high frequencies or amplitudes compared to those of typical cortical signal.
@@ -38,7 +34,8 @@ The annotations created as part of the Lossless pipeline are designed with purgi
 The only manual marks that can be adjusted during QC are component and time. Channel manual marking is determined by the batch configuration file associated with **s01**. Changing decisions made by the pipeline is covered in a further lesson.
 
 > ## Note
-> During purging, manually marked channels or components are removed for the entire datafile. However manually marked time, inserts boundary events that cause rejection of trials during segmentation.>
+> During purging, manually marked channels or components are removed for the entire datafile. However manually marked time, inserts boundary events that cause rejection of trials during segmentation.
+>
 > {: .source}
 {: .callout}
 
