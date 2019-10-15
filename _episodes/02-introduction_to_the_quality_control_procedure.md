@@ -15,9 +15,9 @@ keypoints:
 
 ## Introduction
 
-The Lossless state is an EEG data preprocessing technique that relies on independent component analysis (ICA). The ICA is used to isolate arefacts into independent components that can be marked for rejection. Additionally, cortical compoents can be further investigated in more complex types of analysis. Despite the automated nature of the technique up to this point, the decision made by the pipeline need to be manually reviewed. Quality control (QC) is the procedure of manually reviewing data.
+The Lossless pipeline is an EEG data preprocessing technique that relies on independent component analysis (ICA). The ICA is used to isolate arefacts into independent components that can be marked for rejection. Additionally, cortical components can be further investigated in more complex types of analyses. Despite the automated nature of the technique up to this point, the decisions made by the pipeline need to be manually reviewed. Quality control (QC) is the procedure of manually reviewing data.
 
-During QC, a reviewer will be interacting with the annotations created by the pipeline. These annotations are split up into three groups: channel, component, and time annotations. Reviewing them is accomplished by scrolling through the data and either making changes to the pipeline's decisions, or adding additional annotations. These decisions are made by the main pipeline scripts (LINK) such as **s01** and are customized by their accompanying batch configuration files.
+During QC, a reviewer will be interacting with the annotations created by the pipeline. These annotations are split up into three groups: channel, component, and time annotations. Reviewing them is accomplished by scrolling through the data and either making changes to the pipeline's decisions, or adding additional annotations. These decisions are made by the main [pipeline scripts](https://github.com/BUCANL/BIDS-Lossless-EEG/wiki/Pipeline-Scripts) such as **s01** and are customized by their accompanying batch configuration files.
 
 ## Artefacts
 
@@ -45,7 +45,7 @@ Channel labels produced by the Lossless pipeline are created via the **s01** scr
 
 | Label | Description |
 | ------ | --------------- |
-| manual | The label produced by pipeline decisions along with other labels typically used to indicate which channels are considered artefactual for any reason. |
+| manual | The label produced by pipeline decisions along with other labels. It is typically used to indicate which channels are considered artefactual for any reason. |
 | ch_sd | Pipeline decision flag indicating that channels were too often outliers compared to other channels for the measure of standard deviation of voltage within one second epochs. |
 | low_r | Pipeline decision flag indicating that channels were too often outliers compared to other channels for the measure of correlation coefficient to spatially neighbouring channels within one second epochs. |
 | bridge | Pipeline decision flag indicating that channels were outliers in terms of having high and invariant correlation coefficients to spatially neighbouring channels. |
@@ -57,7 +57,7 @@ As part of **s05**, each component is evaluated via the [ICLabel](https://labeli
 
 | Label | Description |
 | ------ | -----------------|
-| manual | The interactive label modified by analysts interactively or by a pipeline decision along with other labels) typically used to indicate which components are considered artefactual for any reason. |
+| manual | The interactive label modified by analysts interactively or by a pipeline decision along with other labels. It is typically used to indicate which components are considered artefactual for any reason. |
 | ic_rt | Pipeline decision flag indicating that components were not replicated across the three parallel AMICA runs. |
 | brain | ICLabel mark indicating that the component has cortical characteristics. |
 | muscle | ICLabel mark indicating that the component has EMG characteristics. |
@@ -70,13 +70,13 @@ As part of **s05**, each component is evaluated via the [ICLabel](https://labeli
 
 ## Time Pipeline Labels
 
-The EEG component and channel data display marks throughout the file that relate to time. The time marks are independent of the y-axis, i.e. these marks are only related to time and are not related to the location of the components. When the pipeline has marked time as artefactual, there will be a coloured mark that indicates why that time period is considered messy, as well as a gray manual mark.
+The EEG component and channel data windows display marks throughout the file that relate to time. The time marks are independent of the y-axis, i.e. these marks are only related to time and are not related to the location of the components. When the pipeline has marked time as artefactual, there will be a coloured mark that indicates why that time period is considered messy, as well as a gray manual mark.
 
 Throughout the whole file there will be an orange AMICA bar. This bar is related to the level of replication between the three parellel AMICA runs. A lighter orange bar indicates that the three AMICA procedures did not replicate during this time period. The orange AMICA bar will not be at some time periods that are marked as artefactual because these time periods did not run through AMICA.
 
 | Label | Description |
 | -------- | ----------------|
-| manual | The interactive label modified by analysts interactively or by a pipeline decision along with other labels) typically used to indicate which time points are considered artefactual for any reason. |
+| manual | The interactive label modified by analysts interactively or by a pipeline decision along with other labels. It is typically used to indicate which time points are considered artefactual for any reason. |
 | init_ind | Continuous variable indicating the initial time point index within the session. |
 | mark_gap | Pipeline decision flag indicating that time points are within a short gap between other annotations. | 
 | ch_sd | Pipeline decision flag indicating that time points were too often outliers across channels compared to other time points for the measure of standard deviation of voltage within one second epochs. |
