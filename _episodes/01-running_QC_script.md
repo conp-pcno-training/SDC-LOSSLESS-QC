@@ -9,7 +9,8 @@ objectives:
 - "Understand how to start the quality control procedure."
 - "Become familiar with the figures displayed during quality control."
 keypoints:
-- "The input is `*.edf` files."
+- "The input for running the QC script is `*.edf` files."
+- "The QC procedure is a manual review of the decsions the pipeline made. The annontations in the **component** EEG data scroll can be edited to update decisions about the data."
 - "The output is `*desc-qc*` files which contain the annotation information."
 ---
 
