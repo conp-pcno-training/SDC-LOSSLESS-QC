@@ -18,7 +18,7 @@ keypoints:
 The EEG component data window is the main window you will be interacting with during the procedure. Below is a table containing all of the actions that are possible during QC.
 
 | Action | Instructions |
-| ------- | -----------------|
+| --------- | ------------|
 | **Removing or adding back in a component** | Components that are marked for removal will be "grayed out" and will have a gray flag beside the component on the left hand side of the component data window. To toggle the state of the manual mark on a component, right click it. |
 | **Marking out time** | To reject a given period of time, begin by left clicking the beginning the artefactual time period. Move your mouse to the end of the artefactual time period and left click again. This will add a green highlight to the selected time period. Next, hover the mouse over the highlighted time period and click **'m'** on the keyboard to add the gray manual mark. |
 |  **Adding time back in** | Time that the pipeline marked for removal can also be added back in. If you hover over the selected area that you want to add back in and press **[shift + m]**, the manual marking for this time period will be discarded. |
