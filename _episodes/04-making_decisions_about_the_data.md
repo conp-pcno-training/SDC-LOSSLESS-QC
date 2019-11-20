@@ -1,4 +1,4 @@
-    ---
+---
 title: "Making Decisions About the Data"
 teaching: 30
 exercises: 0

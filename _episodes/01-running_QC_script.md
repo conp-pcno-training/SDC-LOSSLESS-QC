@@ -46,6 +46,12 @@ keypoints:
 
 8. Click `| History File |` and add the `qc.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.
 
+    > ## Note 
+    > The `qc.htb` script is optimized to be run with a three monitor setup. If you do not have access to three monitors you should load the `qc_lite.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.      
+    > 
+    > {: .source}
+    {: .callout}
+
 9. Open up a terminal window, and navigate to your local project directory:
 
     `>> cd path/to/project/directory/Face13`
@@ -66,15 +72,21 @@ keypoints:
 
     <span style="color:red">A.</span> A window that displays the **component** EEG data. This is the window that you will be interacting with as you QC. You will be making your decisions in this window by adding or removing a manual mark for components or time points. Components are sorted by the percent data variance accounted for, with the top components accounting for a greater percentage of the channel data. To scroll through the data, use the `<<` and `>>` buttons in this window. These buttons will scroll both the component EEG data and the channel EEG data windows (Figure C). Your decisions can be saved by clicking the `| Update EEG Structure |` button in **component** EEG data window.
 
-    <span style="color:green">B.</span> A figure that displays the ICLabel classification breakdown for each component.
+    <span style="color:green">B.</span> A figure that displays the ICLabel classification breakdown for each component. This figure will not be loaded when running the `qc_lite.htb` script.
 
     <span style="color:blue">C.</span> A window that shows the **channel** EEG data. It also contains an overlay feature that can be toggled on/off or updated while quality controlling. Use of this feature will be explained in subsequent lessons.
 
-    <span style="color:yellow">D.</span> A figure that displays an array of squares corresponding to each 1-second epoch for each component. Each square is colored based on its activation difference from the mean.
+    <span style="color:yellow">D.</span> A figure that displays an array of squares corresponding to each 1-second epoch for each component. Each square is colored based on its activation difference from the mean. This figure will not be loaded when running the `qc_lite.htb` script.
 
     <span style="color:violet">E.</span> Window(s) with a topography for each component. The number label for each topography can be clicked to gain more information.
 
     <span style="color:orange">F.</span> Upon clicking a number label for a component a figure appears which displays the component's spectrum, dipole location, and a mini scroll plot of the full waveform of the selected component. More information on how to interpret this figure can be found in the [ICLabel Tutorial](https://labeling.ucsd.edu/tutorial/format).
+
+    > ## Note 
+    > Feel free to move figures around to suit your needs. For the `qc_lite.htb` script this is strongly recommended.       
+    > 
+    > {: .source}
+    {: .callout}
 
     ![QC Screen Center]({{ page.root }}/fig/qc_screen_center.png)
     ![QC Screen Left]({{ page.root }}/fig/qc_screen_left.png)

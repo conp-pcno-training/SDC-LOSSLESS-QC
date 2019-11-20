@@ -29,12 +29,12 @@ This figure is an example of the EEG **component** data scroll plot. During the 
 
 ## Pipeline Annotations
 
-The annotations created as part of the Lossless pipeline are designed with purging of bad channels, components, and time in mind. This is accomplished using the manual mark. The manual mark is an annotation that is consistant across all three annotation structures (channel, component, and time). The purpose of this mark is to allow for selecting data for removal. The manual mark is structured such that it is the combination of all other decision criteria. For example, if a channel is found to be bridged to its neighbour, it would have both the "bridge" and "manual" mark. In conclusion, channels marked as manual are the set of channels that contain bad or potentially problematic data. Thus, purging manually marked data across channels, components, and time will remove data that has been marked as artefactual for any reason.
+The annotations created as part of the Lossless pipeline are designed with purging of bad channels, components, and time in mind. This is accomplished using the manual mark. The manual mark is an annotation that is consistent across all three annotation structures (channel, component, and time). The purpose of this mark is to allow for selecting data for removal. The manual mark is structured such that it is the combination of all other decision criteria. For example, if a channel is found to be bridged to its neighbour, it would have both the "bridge" and "manual" mark. In conclusion, channels marked as manual are the set of channels that contain bad or potentially problematic data. Thus, purging manually marked data across channels, components, and time will remove data that has been marked as artefactual for any reason.
 
 The only manual marks that can be adjusted during QC are component and time. Channel manual marking is determined by the batch configuration file associated with **s01**. Changing decisions made by the pipeline is covered in a further lesson.
 
 > ## Note
-> During purging, manually marked channels or components are removed for the entire datafile. However manually marked time, inserts boundary events that cause rejection of trials during segmentation.
+> During purging, manually marked channels or components are removed for the entire datafile. However, removing manually marked time inserts boundary events that cause rejection of trials during segmentation.
 >
 > {: .source}
 {: .callout}
@@ -72,7 +72,7 @@ As part of **s05**, each component is evaluated via the [ICLabel](https://labeli
 
 The EEG component and channel data windows display marks throughout the file that relate to time. The time marks are independent of the y-axis, i.e. these marks are only related to time and are not related to the location of the components. When the pipeline has marked time as artefactual, there will be a coloured mark that indicates why that time period is considered messy, as well as a gray manual mark.
 
-Throughout the whole file there will be an orange AMICA bar. This bar is related to the level of replication between the three parellel AMICA runs. A lighter orange bar indicates that the three AMICA procedures did not replicate during this time period. The orange AMICA bar will not be at some time periods that are marked as artefactual because these time periods did not run through AMICA.
+Throughout the whole file there will be an orange bar which is the log likelihood of the AMICA decomposition. The colour of this bar at each time point relates to how much that time point is influencing the overall ICA model. A transparent region means a lower contribution from this time point to the overall amount of learning done. The orange AMICA bar will not be present at some time points that are marked as artefactual because these time points did not run through AMICA.
 
 | Label | Description |
 | -------- | ----------------|
