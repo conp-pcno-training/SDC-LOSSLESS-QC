@@ -46,11 +46,11 @@ keypoints:
 
 8. Click `| History File |` and add the `qc.htb` script located in `derivatives/BIDS-Lossless-EEG/code/scripts/`.
 
-9. Open up a terminal window, and navigate to your `BIDS-Lossless-EEG` directory:
+9. Open up a terminal window, and navigate to your local project directory:
 
-    `>> cd path/to/project/directory/Face13/derivatives/BIDS-Lossless-EEG`
+    `>> cd path/to/project/directory/Face13`
 
-10. In the terminal, list all the data files you’d like to run through the pipeline. This can be done using the find command. If using the BIDS directory structure, simply type:
+10. In the terminal, list all the data files you’d like to run through the QC procedure. This can be done using the find command. If using the BIDS directory structure, simply type:
 
     `>> find . -name "*.edf"`
 
