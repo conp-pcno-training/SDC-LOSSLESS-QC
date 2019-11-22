@@ -1,8 +1,8 @@
-# FIXME Lesson title
+# Lossless Quality Control Procedure
 
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/)
 
-FIXME
+An introduction to the Lossless Quality Control (QC) procedure. The rendered version of this lesson can be found [here](https://bucanl.github.io/SDC-LOSSLESS-QC/).
 
 ## Contributing
 
@@ -15,14 +15,9 @@ how to write new episodes.
 
 ## Maintainer(s)
 
-* FIXME
+* [Sara Stephenson](https://github.com/SaraStephenson)
+* [Tyler Collins](https://github.com/Andesha)
 
 ## Authors
 
 A list of contributors to the lesson can be found in [AUTHORS](AUTHORS)
-
-## Citation
-
-To cite this lesson, please consult with [CITATION](CITATION)
-
-[lesson-example]: https://carpentries.github.io/lesson-example
